@@ -29,7 +29,8 @@ import {
   AlertCircle,
   BookOpen,
   Eye,
-  Shield
+  Shield,
+  Instagram
 } from 'lucide-react';
 
 // --- Components ---
@@ -916,7 +917,7 @@ export default function App() {
                 Referência técnica em Macaé e em todo o Brasil. Inteligência e agilidade para o mercado imobiliário.
               </p>
             </div>
-            <div className="grid grid-cols-2 gap-20">
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-16 md:gap-20">
               <div>
                 <h5 className="text-[10px] font-black uppercase tracking-[0.3em] text-white/30 mb-8">Navegação</h5>
                 <ul className="space-y-4">
@@ -930,6 +931,22 @@ export default function App() {
                 <ul className="space-y-4">
                   <li><a href="#contato" className="text-sm text-white/60 hover:text-white transition-colors">Contato</a></li>
                   <li><span className="text-sm text-white/40">Macaé, RJ</span></li>
+                </ul>
+              </div>
+              <div>
+                <h5 className="text-[10px] font-black uppercase tracking-[0.3em] text-white/30 mb-8">Social</h5>
+                <ul className="space-y-4">
+                  <li>
+                    <a 
+                      href="https://www.instagram.com/tmcengenharia_/" 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="text-sm text-white/60 hover:text-white transition-all flex items-center gap-3 group/inst"
+                    >
+                      <Instagram size={18} className="text-white/40 group-hover/inst:text-brand-accent transition-colors" />
+                      Instagram
+                    </a>
+                  </li>
                 </ul>
               </div>
             </div>
