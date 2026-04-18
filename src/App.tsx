@@ -267,6 +267,16 @@ const ServiceCard = ({ icon: Icon, title, description, items, delay = 0 }: any) 
               </li>
             ))}
           </ul>
+
+          <a 
+            href={`https://wa.me/5522992436434?text=Olá! Vi o site de vocês e gostaria de solicitar um orçamento para: ${encodeURIComponent(title)}`}
+            target="_blank"
+            rel="noopener noreferrer"
+            onClick={(e) => e.stopPropagation()}
+            className="mt-8 w-full bg-brand-accent text-white py-4 rounded-xl font-black text-[10px] uppercase tracking-[0.2em] flex items-center justify-center gap-3 hover:bg-brand-dark transition-all shadow-lg active:scale-95"
+          >
+            Solicitar este Serviço <ArrowRight size={14} />
+          </a>
         </motion.div>
       </div>
     </motion.div>
