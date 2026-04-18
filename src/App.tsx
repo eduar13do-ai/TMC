@@ -354,19 +354,27 @@ export default function App() {
 
       <main>
         {/* Hero Section */}
-        <section id="inicio" className="relative min-h-[95vh] flex items-center py-32 bg-brand-surface overflow-hidden">
+        <section id="inicio" className="relative min-h-screen flex items-center py-32 bg-brand-dark overflow-hidden">
           <motion.div 
             style={{ y: heroBgY }}
             className="absolute inset-0 z-0"
           >
-            {/* Ambient gradients to reduce white feel */}
-            <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-brand-accent-gold/5 rounded-full blur-[150px] -translate-y-1/2 translate-x-1/4" />
-            <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-brand-accent/5 rounded-full blur-[120px] translate-y-1/4 -translate-x-1/4" />
+            {/* New Hero Image with Filters */}
+            <img 
+              src="/fotos/hero-bg.jpg" 
+              alt="TMC Engenharia - Obras de Elite"
+              className="absolute inset-0 w-full h-full object-cover brightness-[0.35] saturate-[0.8] contrast-[1.1]"
+              onError={(e) => {
+                (e.target as HTMLImageElement).src = 'https://images.unsplash.com/photo-1541888946425-d81bb19480c5?q=80&w=2070&auto=format&fit=crop';
+              }}
+            />
             
-            <div className="blueprint-grid opacity-[0.03]" />
-            <div className="blueprint-dots opacity-[0.06]" />
+            {/* Cinematic Gradient Overlays */}
+            <div className="absolute inset-0 bg-gradient-to-r from-brand-dark via-brand-dark/40 to-transparent opacity-80" />
+            <div className="absolute inset-0 bg-gradient-to-b from-brand-dark/20 via-transparent to-brand-surface" />
             
-            <div className="absolute inset-0 bg-gradient-to-b from-transparent via-brand-surface/40 to-brand-surface" />
+            <div className="blueprint-grid opacity-[0.05] grayscale brightness-0 invert" />
+            <div className="blueprint-dots opacity-[0.1] grayscale brightness-0 invert" />
           </motion.div>
 
           <div className="container mx-auto px-6 relative z-10">
@@ -380,14 +388,14 @@ export default function App() {
                 <span className="text-[10px] font-black tracking-[0.4em] uppercase text-brand-accent drop-shadow-sm">Engenharia de Elite</span>
               </motion.div>
 
-              <h1 className="text-6xl sm:text-8xl md:text-[130px] font-extrabold tracking-tighter mb-8 sm:mb-10 leading-[0.9] text-brand-text">
-                <span className="inline-block hover:text-brand-accent transition-colors duration-500">A Sua</span> <br />
+              <h1 className="text-6xl sm:text-8xl md:text-[130px] font-extrabold tracking-tighter mb-8 sm:mb-10 leading-[0.9] text-white">
+                <span className="inline-block hover:text-brand-accent-gold transition-colors duration-500">A Sua</span> <br />
                 <span className="text-dynamic-accent">
                   Disposição
                 </span>
               </h1>
 
-              <p className="text-lg sm:text-xl md:text-2xl text-brand-muted max-w-2xl mb-12 sm:mb-16 leading-relaxed font-light">
+              <p className="text-lg sm:text-xl md:text-2xl text-white/80 max-w-2xl mb-12 sm:mb-16 leading-relaxed font-light">
                 Perícias, reformas de luxo e estruturas metálicas. Unimos o rigor técnico à visão estratégica para proteger seu patrimônio.
               </p>
 
