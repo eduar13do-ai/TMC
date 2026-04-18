@@ -173,7 +173,9 @@ const Navbar = () => {
             </a>
           ))}
           <a 
-            href="#contato" 
+            href="https://wa.me/5522992436434?text=Olá! Gostaria de solicitar um orçamento com a TMC Engenharia." 
+            target="_blank"
+            rel="noopener noreferrer"
             className="bg-white text-brand-dark px-8 py-3 rounded-2xl text-[11px] font-black uppercase tracking-[0.2em] hover:bg-brand-accent hover:text-white transition-all hover:scale-105 active:scale-95 shadow-lg shadow-white/5"
           >
             Orçamento
@@ -210,7 +212,9 @@ const Navbar = () => {
               </a>
             ))}
             <a 
-              href="#contato" 
+              href="https://wa.me/5522992436434?text=Olá! Gostaria de solicitar um orçamento com a TMC Engenharia." 
+              target="_blank"
+              rel="noopener noreferrer"
               onClick={() => setIsMobileMenuOpen(false)}
               className="bg-brand-accent text-white px-8 py-5 rounded-2xl text-center font-black uppercase tracking-[0.2em] shadow-lg shadow-brand-accent/20 active:scale-95 transition-transform"
             >
