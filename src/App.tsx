@@ -938,7 +938,7 @@ export default function App() {
                 <ul className="space-y-4">
                   <li>
                     <a 
-                      href="https://www.instagram.com/tmcengenharia_/" 
+                      href="https://www.instagram.com/engenhariatmc/" 
                       target="_blank" 
                       rel="noopener noreferrer"
                       className="text-sm text-white/60 hover:text-white transition-all flex items-center gap-3 group/inst"
