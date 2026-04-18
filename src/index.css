@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --color-brand-accent: #7A3236;
+  --color-brand-accent-light: #9B4247;
+  --color-brand-accent-dark: #5A2528;
+  --color-brand-dark: #1A1112;
+  --color-brand-light: #FFFFFF;
+  --color-brand-surface: #F9F8F6;
+  --color-brand-surface-muted: #F2F0ED;
+  --color-brand-text: #1A1A1A;
+  --color-brand-muted: #666666;
+
+  --bg-gradient-premium: radial-gradient(circle at 10% 20%, rgba(122, 50, 54, 0.08) 0%, transparent 40%),
+    radial-gradient(circle at 90% 80%, rgba(122, 50, 54, 0.12) 0%, transparent 40%);
+
+  --bg-gradient-dark-premium: linear-gradient(135deg, #1A1112 0%, #2A1A1C 100%);
+
+  --shadow-premium: 0 10px 40px -10px rgba(0, 0, 0, 0.08), 0 5px 20px -5px rgba(0, 0, 0, 0.03);
+  --shadow-premium-hover: 0 20px 50px -12px rgba(122, 50, 54, 0.15), 0 10px 25px -10px rgba(0, 0, 0, 0.08);
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    @apply antialiased;
+  }
+
+  body {
+    @apply bg-brand-light text-brand-text font-sans selection:bg-brand-accent/20 selection:text-brand-accent;
+  }
+
+  section {
+    scroll-margin-top: 90px;
+  }
+}
+
+@layer components {
+  .noise-overlay {
+    @apply fixed inset-0 pointer-events-none z-[9999] opacity-[0.03];
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+  }
+
+  .blueprint-grid {
+    @apply absolute inset-0 pointer-events-none opacity-[0.05];
+    background-image:
+      linear-gradient(to right, #7A3236 1px, transparent 1px),
+      linear-gradient(to bottom, #7A3236 1px, transparent 1px);
+    background-size: 80px 80px;
+  }
+
+  .blueprint-dots {
+    @apply absolute inset-0 pointer-events-none opacity-[0.1];
+    background-image: radial-gradient(#7A3236 0.5px, transparent 0.5px);
+    background-size: 20px 20px;
+  }
+
+  .bg-premium-ambient {
+    background-color: var(--color-brand-light);
+    background-image: var(--bg-gradient-premium);
+  }
+
+  .bg-dark-premium {
+    background-image: var(--bg-gradient-dark-premium);
+  }
+
+  .glass-card {
+    @apply bg-white/60 backdrop-blur-md border border-white/40 shadow-premium transition-all duration-500;
+  }
+
+  .glass-card-accent {
+    @apply bg-white/70 backdrop-blur-lg border border-brand-accent/20 shadow-premium transition-all duration-500 hover:shadow-premium-hover;
+  }
+
+  .card-premium-interactive {
+    @apply relative overflow-hidden rounded-[32px] p-8 transition-all duration-700;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.98) 0%, rgba(249, 248, 246, 0.9) 100%);
+    border: 1px solid rgba(122, 50, 54, 0.1);
+    box-shadow:
+      0 12px 35px -12px rgba(0, 0, 0, 0.1),
+      inset 0 0 30px rgba(255, 255, 255, 0.6);
+  }
+
+  .card-premium-interactive:hover {
+    @apply -translate-y-2;
+    border-color: rgba(122, 50, 54, 0.2);
+    box-shadow:
+      0 30px 60px -15px rgba(122, 50, 54, 0.08),
+      0 10px 20px -10px rgba(0, 0, 0, 0.03);
+  }
+
+  .text-dynamic-accent {
+    @apply bg-gradient-to-r from-brand-accent to-brand-accent-light bg-clip-text text-transparent;
+  }
+}
+
+.fade-in {
+  animation: fadeIn 1s ease-out forwards;
+}
+
+.fade-in-up {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.8s ease-out forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.delay-1 {
+  animation-delay: 0.2s;
+}
+
+.delay-2 {
+  animation-delay: 0.4s;
+}
+
+.delay-3 {
+  animation-delay: 0.6s;
+}
