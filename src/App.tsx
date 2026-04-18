@@ -337,6 +337,31 @@ const ScrollingTicker = () => {
   );
 };
 
+// WhatsApp Floating Button Component
+const WhatsAppButton = () => {
+  return (
+    <motion.a
+      href="https://wa.me/5522992436434"
+      target="_blank"
+      rel="noopener noreferrer"
+      initial={{ opacity: 0, scale: 0.5, y: 50 }}
+      whileInView={{ opacity: 1, scale: 1, y: 0 }}
+      viewport={{ once: true }}
+      whileHover={{ scale: 1.1, rotate: 5 }}
+      whileActive={{ scale: 0.9 }}
+      className="fixed bottom-8 right-8 z-[100] bg-[#25D366] text-white p-4 sm:p-5 rounded-full shadow-[0_10px_30px_rgba(37,211,102,0.4)] flex items-center justify-center border-2 border-white/20 group"
+    >
+      <div className="absolute inset-0 rounded-full bg-[#25D366] animate-ping opacity-20 group-hover:opacity-40" />
+      <Phone size={28} className="relative z-10" fill="currentColor" />
+      
+      {/* Tooltip */}
+      <span className="absolute right-full mr-4 bg-brand-dark text-white text-[10px] font-black uppercase tracking-[0.2em] px-4 py-2 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap border border-white/10 pointer-events-none shadow-2xl">
+        Falar com Especialista
+      </span>
+    </motion.a>
+  );
+};
+
 export default function App() {
   const { scrollYProgress, scrollY } = useScroll();
   const heroBgY = useTransform(scrollY, [0, 1000], ['0%', '20%']);
@@ -907,6 +932,9 @@ export default function App() {
           </div>
         </div>
       </footer>
+      
+      {/* WhatsApp Floating Button */}
+      <WhatsAppButton />
     </div>
   );
 }
