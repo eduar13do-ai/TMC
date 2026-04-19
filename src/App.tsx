@@ -490,23 +490,7 @@ export default function App() {
             </motion.h2>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 items-start">
-
-            <ServiceCard 
-              icon={FileText}
-              title="Avaliação de Edificações"
-              description="Avaliação de edificações, identificação de problemas estruturais e emissão de relatórios técnicos."
-              items={["Laudos técnicos especializados", "Identificação de patologias", "Relatórios detalhados"]}
-              delay={0.2}
-            />
-            <ServiceCard 
-              icon={Settings}
-              title="Consultoria em Engenharia"
-              description="Suporte técnico especializado para projetos de construção, reforma, regularização e segurança."
-              items={["Projetos personalizados", "Acompanhamento técnico", "Gestão de obras"]}
-              delay={0.3}
-            />
-
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 items-start">
             <ServiceCard 
               icon={DollarSign}
               title="Regularização na Receita federal"
@@ -515,147 +499,66 @@ export default function App() {
               delay={0.1}
             />
             <ServiceCard 
-              icon={AlertCircle}
-              title="Avaliação de Imóveis"
-              description="Larga experiência na avaliação de imóveis para diversos fins."
-              items={["Avaliação mercadológica", "Laudos para banco", "Valorização patrimonial"]}
+              icon={Settings}
+              title="Consultoria em Engenharia"
+              description="Suporte técnico especializado para projetos de construção, reforma, regularização e segurança."
+              items={["Projetos personalizados", "Acompanhamento técnico", "Gestão de obras", "Fiscalização de obra"]}
               delay={0.2}
             />
             <ServiceCard 
-              icon={BookOpen}
-              title="Elaboração de Manuais"
-              description="Com uma equipe especializada, temos grande experiência na elaboração de manuais técnicos."
-              items={["Manual do Proprietário", "Normas técnicas", "Procedimentos operacionais"]}
+              icon={ClipboardList}
+              title="Assistência Condominial"
+              description="Suporte completo para gestão e manutenção de condomínios profissionais."
+              items={["Plano de manutenção", "Recebimento e implantação de condomínios", "Gestão de reforma"]}
               delay={0.3}
+            />
+            <ServiceCard 
+              icon={Drone}
+              title="Inspeção com Drone"
+              description="Vistorias seguras e relatórios de alta precisão com tecnologia aérea de ponta."
+              items={["Inspeção de fachada", "Levantamento de dados", "Relatórios detalhados"]}
+              delay={0.4}
+            />
+            <ServiceCard 
+              icon={Droplets}
+              title="Consultoria em Impermeabilização"
+              description="Especialista em prevenção e solução definitiva de problemas de infiltração."
+              items={["Escolha de sistemas", "Prevenção de falhas e retrabalho", "Relatórios claros e objetivos"]}
+              delay={0.5}
+            />
+            <ServiceCard 
+              icon={FileText}
+              title="Avaliação de Edificações"
+              description="Identificação de problemas estruturais e emissão de laudos técnicos especializados."
+              items={["Laudos técnicos", "Identificação de patologias", "Relatórios detalhados"]}
+              delay={0.6}
+            />
+            <ServiceCard 
+              icon={AlertCircle}
+              title="Avaliação de Imóveis"
+              description="Larga experiência na avaliação mercadológica de imóveis para diversos fins."
+              items={["Avaliação mercadológica", "Laudos para banco", "Valorização patrimonial"]}
+              delay={0.7}
             />
             <ServiceCard 
               icon={Eye}
               title="Vistorias"
-              description="Serviço de alta qualidade no desenvolvimento de obras e avaliação de imóveis."
+              description="Serviço de alta qualidade no acompanhamento de obras e avaliação de imóveis."
               items={["Vistoria técnica", "Perícia judicial", "Laudo pericial"]}
-              delay={0.4}
+              delay={0.8}
+            />
+            <ServiceCard 
+              icon={BookOpen}
+              title="Elaboração de Manuais"
+              description="Grande experiência na elaboração de manuais técnicos e normas."
+              items={["Manual do Proprietário", "Normas técnicas", "Procedimentos operacionais"]}
+              delay={0.9}
             />
           </div>
         </div>
       </section>
 
-      {/* Assistência Condominial */}
-      <section className="py-24 sm:py-32 relative bg-premium-ambient overflow-hidden border-t border-brand-accent/5">
-        <div className="container mx-auto px-6 relative z-10">
-          <div className="text-center max-w-3xl mx-auto mb-16">
-            <motion.h2 
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              className="text-4xl sm:text-6xl font-extrabold mb-6 tracking-tighter text-brand-text"
-            >
-              Assistência <span className="text-dynamic-accent">Condominial</span>
-            </motion.h2>
-          </div>
-          <div className="max-w-5xl mx-auto">
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              <ServiceCard 
-                icon={ClipboardList}
-                title="Plano de Manutenção"
-                description="Planejamento estratégico para garantir a vida útil e segurança das instalações."
-                items={["Cronograma preventivo", "Vistorias periódicas", "Gestão de ativos"]}
-              />
-              <ServiceCard 
-                icon={Building2}
-                title="Recebimento de Condomínios"
-                description="Auditoria técnica rigorosa na entrega de áreas comuns e unidades autônomas."
-                items={["Verificação de normas", "Identificação de vícios", "Relatório de conformidade"]}
-              />
-              <ServiceCard 
-                icon={Users}
-                title="Gestão de Reforma"
-                description="Acompanhamento técnico para obras em unidades, garantindo a segurança estrutural."
-                items={["Análise de projetos", "Monitoramento de execução", "ART de reforma"]}
-              />
-            </div>
-          </div>
-        </div>
-      </section>
 
-      {/* Inspeção com Drone */}
-      <section className="py-24 sm:py-32 relative bg-brand-dark overflow-hidden">
-        <div className="blueprint-grid opacity-[0.05] grayscale brightness-0 invert" />
-        <div className="container mx-auto px-6 relative z-10">
-          <div className="grid lg:grid-cols-2 gap-16 items-center">
-            <motion.div
-              initial={{ opacity: 0, x: -30 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-            >
-              <h2 className="text-4xl sm:text-7xl font-black mb-8 tracking-tighter text-white">
-                Inspeção com <br /><span className="text-brand-accent">Drone</span>
-              </h2>
-              <p className="text-white/60 text-lg sm:text-xl mb-10 font-light leading-relaxed">
-                Utilizamos tecnologia de voo autônomo e sensores de alta resolução para vistorias técnicas e mapeamentos complexos.
-              </p>
-              <div className="space-y-6">
-                {[
-                  { title: "Inspeção de Fachada", desc: "Mapeamento completo de patologias em altura sem necessidade de balancins." },
-                  { title: "Levantamento de Dados", desc: "Coleta precisa de informações visuais e térmicas para análise estrutural." },
-                  { title: "Planejamento Estratégico", desc: "Relatórios detalhados que fundamentam decisões críticas de manutenção." }
-                ].map((item, i) => (
-                  <div key={i} className="flex gap-4 items-start border-l-2 border-brand-accent/30 pl-6">
-                    <div>
-                      <h4 className="text-white font-bold mb-1">{item.title}</h4>
-                      <p className="text-white/40 text-sm">{item.desc}</p>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </motion.div>
-            <div className="relative">
-              <div className="absolute -inset-10 bg-brand-accent/10 blur-[100px] rounded-full" />
-              <ServiceCard 
-                icon={Drone}
-                title="Tecnologia Aérea"
-                description="Vistorias seguras e relatórios de alta precisão."
-                items={["Termografia", "Fotogrametria", "Acompanhamento de obra"]}
-              />
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Consultoria em Impermeabilização */}
-      <section className="py-24 sm:py-32 relative bg-brand-surface overflow-hidden border-t border-brand-accent/5">
-        <div className="container mx-auto px-6 relative z-10">
-          <div className="text-center max-w-3xl mx-auto mb-16">
-            <motion.h2 
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              className="text-4xl sm:text-6xl font-extrabold mb-6 tracking-tighter text-brand-text"
-            >
-              Consultoria em <span className="text-dynamic-accent">Impermeabilização</span>
-            </motion.h2>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <ServiceCard 
-              icon={Droplets}
-              title="Escolha de Sistemas"
-              description="Consultoria técnica para definição da melhor solução para cada área."
-              items={["Análise de exposição", "Custo-benefício", "Especificação técnica"]}
-            />
-            <ServiceCard 
-              icon={ShieldCheck}
-              title="Prevenção de Falhas"
-              description="Evite retrabalhos e custos extras com acompanhamento especializado."
-              items={["Fiscalização de aplicação", "Testes de estanqueidade", "Cura e proteção"]}
-            />
-            <ServiceCard 
-              icon={FileSearch}
-              title="Relatórios Objetivos"
-              description="Documentação clara sobre o estado e execução dos sistemas."
-              items={["Diagnóstico de infiltrações", "Planos de ação", "Certificação de garantia"]}
-            />
-          </div>
-        </div>
-      </section>
 
       {/* About Section - Dark Thematic Shift */}
       <section id="quemsomos" className="py-24 sm:py-40 relative bg-dark-premium overflow-hidden">
