@@ -30,7 +30,10 @@ import {
   BookOpen,
   Eye,
   Shield,
-  Instagram
+  Instagram,
+  ClipboardList,
+  Drone,
+  Droplets
 } from 'lucide-react';
 
 // --- Components ---
@@ -419,14 +422,8 @@ export default function App() {
 
           <div className="container mx-auto px-6 relative z-10">
             <motion.div style={{ y: heroTextY, opacity: heroOpacity }} className="max-w-4xl">
-              <motion.div 
-                initial={{ opacity: 0, x: -20 }}
-                animate={{ opacity: 1, x: 0 }}
-                className="flex items-center gap-4 mb-10"
-              >
                 <div className="h-px w-12 bg-brand-accent-gold" />
-                <span className="text-[10px] font-black tracking-[0.4em] uppercase text-brand-accent drop-shadow-sm">Engenharia de Elite</span>
-              </motion.div>
+
 
               <h1 className="text-6xl sm:text-8xl md:text-[130px] font-extrabold tracking-tighter mb-8 sm:mb-10 leading-[0.9] text-white">
                 <span className="inline-block hover:text-brand-accent-gold transition-colors duration-500">A Sua</span> <br />
@@ -435,8 +432,10 @@ export default function App() {
                 </span>
               </h1>
 
-              <p className="text-lg sm:text-xl md:text-2xl text-white/80 max-w-2xl mb-12 sm:mb-16 leading-relaxed font-light">
-                Perícias, reformas de luxo e estruturas metálicas. Unimos o rigor técnico à visão estratégica para proteger seu patrimônio.
+              <p className="text-lg sm:text-xl md:text-2xl text-white/80 max-w-3xl mb-12 sm:mb-16 leading-relaxed font-light">
+                Oferecemos soluções completas em perícias técnicas, laudos, avaliações imobiliárias, vistorias, inspeções prediais, assistência condominial e regularização junto à Receita Federal. <br /><br />
+                Atuamos com foco na mitigação de riscos, redução de falhas e suporte estratégico para decisões seguras e assertivas. <br /><br />
+                Mais do que executar serviços, entregamos confiança, transparência e excelência técnica para proteger e valorizar o seu patrimônio.
               </p>
 
               <motion.div 
@@ -492,13 +491,7 @@ export default function App() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 items-start">
-            <ServiceCard 
-              icon={Home}
-              title="Regularização de Imóveis"
-              description="Cuidamos da documentação para garantir que seu imóvel esteja conforme a lei."
-              items={["Análise documental completa", "Protocolos nos órgãos reguladores", "Certidão de regularização"]}
-              delay={0.1}
-            />
+
             <ServiceCard 
               icon={FileText}
               title="Avaliação de Edificações"
@@ -513,18 +506,12 @@ export default function App() {
               items={["Projetos personalizados", "Acompanhamento técnico", "Gestão de obras"]}
               delay={0.3}
             />
-            <ServiceCard 
-              icon={Building2}
-              title="Aprovação de Alvarás"
-              description="Assessoria completa para obtenção de alvarás e licenças junto aos órgãos reguladores."
-              items={["Habite-se", "Alvará de construção", "Licenças ambientais"]}
-              delay={0.4}
-            />
+
             <ServiceCard 
               icon={DollarSign}
-              title="Certidão Negativa de Débitos"
-              description="Ao finalizar a obra, é obrigatório emitir o habite-se, que compõe a certidão negativa de débitos."
-              items={["CND Municipal", "CND Federal", "Habite-se"]}
+              title="Regularização na Receita federal"
+              description="Reduza em até 90% o INSS da sua obra com o time da TMC que já regularizou + de 200 obras em todo o Brasil!"
+              items={["Emissão CNO", "Aferição da obra", "Emissão CND"]}
               delay={0.1}
             />
             <ServiceCard 
@@ -547,6 +534,124 @@ export default function App() {
               description="Serviço de alta qualidade no desenvolvimento de obras e avaliação de imóveis."
               items={["Vistoria técnica", "Perícia judicial", "Laudo pericial"]}
               delay={0.4}
+            />
+          </div>
+        </div>
+      </section>
+
+      {/* Assistência Condominial */}
+      <section className="py-24 sm:py-32 relative bg-premium-ambient overflow-hidden border-t border-brand-accent/5">
+        <div className="container mx-auto px-6 relative z-10">
+          <div className="text-center max-w-3xl mx-auto mb-16">
+            <motion.h2 
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="text-4xl sm:text-6xl font-extrabold mb-6 tracking-tighter text-brand-text"
+            >
+              Assistência <span className="text-dynamic-accent">Condominial</span>
+            </motion.h2>
+          </div>
+          <div className="max-w-5xl mx-auto">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              <ServiceCard 
+                icon={ClipboardList}
+                title="Plano de Manutenção"
+                description="Planejamento estratégico para garantir a vida útil e segurança das instalações."
+                items={["Cronograma preventivo", "Vistorias periódicas", "Gestão de ativos"]}
+              />
+              <ServiceCard 
+                icon={Building2}
+                title="Recebimento de Condomínios"
+                description="Auditoria técnica rigorosa na entrega de áreas comuns e unidades autônomas."
+                items={["Verificação de normas", "Identificação de vícios", "Relatório de conformidade"]}
+              />
+              <ServiceCard 
+                icon={Users}
+                title="Gestão de Reforma"
+                description="Acompanhamento técnico para obras em unidades, garantindo a segurança estrutural."
+                items={["Análise de projetos", "Monitoramento de execução", "ART de reforma"]}
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Inspeção com Drone */}
+      <section className="py-24 sm:py-32 relative bg-brand-dark overflow-hidden">
+        <div className="blueprint-grid opacity-[0.05] grayscale brightness-0 invert" />
+        <div className="container mx-auto px-6 relative z-10">
+          <div className="grid lg:grid-cols-2 gap-16 items-center">
+            <motion.div
+              initial={{ opacity: 0, x: -30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+            >
+              <h2 className="text-4xl sm:text-7xl font-black mb-8 tracking-tighter text-white">
+                Inspeção com <br /><span className="text-brand-accent">Drone</span>
+              </h2>
+              <p className="text-white/60 text-lg sm:text-xl mb-10 font-light leading-relaxed">
+                Utilizamos tecnologia de voo autônomo e sensores de alta resolução para vistorias técnicas e mapeamentos complexos.
+              </p>
+              <div className="space-y-6">
+                {[
+                  { title: "Inspeção de Fachada", desc: "Mapeamento completo de patologias em altura sem necessidade de balancins." },
+                  { title: "Levantamento de Dados", desc: "Coleta precisa de informações visuais e térmicas para análise estrutural." },
+                  { title: "Planejamento Estratégico", desc: "Relatórios detalhados que fundamentam decisões críticas de manutenção." }
+                ].map((item, i) => (
+                  <div key={i} className="flex gap-4 items-start border-l-2 border-brand-accent/30 pl-6">
+                    <div>
+                      <h4 className="text-white font-bold mb-1">{item.title}</h4>
+                      <p className="text-white/40 text-sm">{item.desc}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </motion.div>
+            <div className="relative">
+              <div className="absolute -inset-10 bg-brand-accent/10 blur-[100px] rounded-full" />
+              <ServiceCard 
+                icon={Drone}
+                title="Tecnologia Aérea"
+                description="Vistorias seguras e relatórios de alta precisão."
+                items={["Termografia", "Fotogrametria", "Acompanhamento de obra"]}
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Consultoria em Impermeabilização */}
+      <section className="py-24 sm:py-32 relative bg-brand-surface overflow-hidden border-t border-brand-accent/5">
+        <div className="container mx-auto px-6 relative z-10">
+          <div className="text-center max-w-3xl mx-auto mb-16">
+            <motion.h2 
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="text-4xl sm:text-6xl font-extrabold mb-6 tracking-tighter text-brand-text"
+            >
+              Consultoria em <span className="text-dynamic-accent">Impermeabilização</span>
+            </motion.h2>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <ServiceCard 
+              icon={Droplets}
+              title="Escolha de Sistemas"
+              description="Consultoria técnica para definição da melhor solução para cada área."
+              items={["Análise de exposição", "Custo-benefício", "Especificação técnica"]}
+            />
+            <ServiceCard 
+              icon={ShieldCheck}
+              title="Prevenção de Falhas"
+              description="Evite retrabalhos e custos extras com acompanhamento especializado."
+              items={["Fiscalização de aplicação", "Testes de estanqueidade", "Cura e proteção"]}
+            />
+            <ServiceCard 
+              icon={FileSearch}
+              title="Relatórios Objetivos"
+              description="Documentação clara sobre o estado e execução dos sistemas."
+              items={["Diagnóstico de infiltrações", "Planos de ação", "Certificação de garantia"]}
             />
           </div>
         </div>
