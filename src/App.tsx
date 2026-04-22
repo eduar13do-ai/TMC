@@ -499,9 +499,9 @@ export default function App() {
 
 
               <h1 className="text-6xl sm:text-8xl md:text-[130px] font-extrabold tracking-tighter mb-8 sm:mb-10 leading-[0.9] text-white">
-                <span className="inline-block hover:text-brand-accent-gold transition-colors duration-500">A Sua</span> <br />
+                <span className="inline-block hover:text-brand-accent-gold transition-colors duration-500">Soluções</span> <br />
                 <span className="text-dynamic-accent">
-                  Disposição
+                  ao seu alcance
                 </span>
               </h1>
 
@@ -691,7 +691,7 @@ export default function App() {
                   {/* Image Container */}
                   <div className="relative aspect-[4/5] rounded-[40px] sm:rounded-[60px] overflow-hidden group/img shadow-[0_40px_80px_-20px_rgba(0,0,0,0.6)] ring-1 ring-white/10 bg-brand-surface-muted">
                     <img
-                      src="/fotos/foto.jpg"
+                      src="/fotos/foto2.jpeg"
                       alt="TMC Engenharia - Estratégia e Execução"
                       className="absolute inset-0 w-full h-full object-cover transition-transform duration-1000 group-hover/img:scale-110"
                       onError={(e) => {
@@ -1024,7 +1024,7 @@ export default function App() {
                 TMC<span className="text-brand-accent">Engenharia</span>
               </div>
               <p className="text-white/40 text-lg font-light leading-relaxed">
-                Referência técnica em Macaé e em todo o Brasil. Inteligência e agilidade para o mercado imobiliário.
+                Referencia técnica no RJ e em todo o brasil, inteligencia e agilidade para o mercado imobiliario
               </p>
             </div>
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-16 md:gap-20">
