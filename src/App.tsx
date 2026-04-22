@@ -475,16 +475,11 @@ export default function App() {
             style={{ y: heroBgY }}
             className="absolute inset-0 z-0"
           >
-            {/* Imagem de fundo: Prédios no Mobile (mais clara), Modelo no Desktop (bem à direita) */}
+            {/* Imagem de fundo unificada: Hero Background para Mobile e Desktop */}
             <img
               src="/fotos/hero-bg.jpg"
               alt="TMC Engenharia"
-              className="absolute inset-0 w-full h-full object-cover md:object-right brightness-[0.35] saturate-[0.8] contrast-[1.1] hidden md:block"
-            />
-            <img
-              src="https://images.unsplash.com/photo-1541888946425-d81bb19480c5?q=80&w=2070&auto=format&fit=crop"
-              alt="TMC Engenharia Background"
-              className="absolute inset-0 w-full h-full object-cover brightness-[0.5] saturate-[0.8] contrast-[1.1] md:hidden"
+              className="absolute inset-0 w-full h-full object-cover md:object-right brightness-[0.35] saturate-[0.8] contrast-[1.1]"
             />
 
             {/* Cinematic Gradient Overlays */}
@@ -526,21 +521,6 @@ export default function App() {
                   Ver Portfólio
                 </a>
               </motion.div>
-            </motion.div>
-
-            {/* Foto da Expert no Mobile - Posicionada fora do parallax */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.3 }}
-              className="md:hidden w-full max-w-sm aspect-[4/5] rounded-[40px] overflow-hidden shadow-2xl border border-white/10 mt-8 mb-12 relative z-20"
-            >
-              <img 
-                src="/fotos/foto2.jpeg" 
-                alt="Expert TMC" 
-                className="w-full h-full object-cover"
-              />
             </motion.div>
           </div>
 
