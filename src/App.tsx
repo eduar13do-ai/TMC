@@ -470,19 +470,21 @@ export default function App() {
 
       <main>
         {/* Hero Section */}
-        <section id="inicio" className="relative min-h-screen flex items-center py-32 bg-brand-dark overflow-hidden">
+        <section id="inicio" className="relative min-h-screen flex flex-col md:flex-row items-center pt-32 pb-12 md:py-32 bg-brand-dark overflow-hidden">
           <motion.div
             style={{ y: heroBgY }}
             className="absolute inset-0 z-0"
           >
-            {/* New Hero Image with Filters */}
+            {/* Imagem de fundo: Prédios no Mobile (mais clara), Modelo no Desktop (bem à direita) */}
             <img
               src="/fotos/hero-bg.jpg"
-              alt="TMC Engenharia - Obras de Elite"
-              className="absolute inset-0 w-full h-full object-cover brightness-[0.35] saturate-[0.8] contrast-[1.1]"
-              onError={(e) => {
-                (e.target as HTMLImageElement).src = 'https://images.unsplash.com/photo-1541888946425-d81bb19480c5?q=80&w=2070&auto=format&fit=crop';
-              }}
+              alt="TMC Engenharia"
+              className="absolute inset-0 w-full h-full object-cover md:object-right brightness-[0.35] saturate-[0.8] contrast-[1.1] hidden md:block"
+            />
+            <img
+              src="https://images.unsplash.com/photo-1541888946425-d81bb19480c5?q=80&w=2070&auto=format&fit=crop"
+              alt="TMC Engenharia Background"
+              className="absolute inset-0 w-full h-full object-cover brightness-[0.5] saturate-[0.8] contrast-[1.1] md:hidden"
             />
 
             {/* Cinematic Gradient Overlays */}
@@ -493,8 +495,8 @@ export default function App() {
             <div className="blueprint-dots opacity-[0.1] grayscale brightness-0 invert" />
           </motion.div>
 
-          <div className="container mx-auto px-6 relative z-10">
-            <motion.div style={{ y: heroTextY, opacity: heroOpacity }} className="max-w-4xl">
+          <div className="container mx-auto px-6 relative z-10 flex flex-col items-center md:items-start">
+            <motion.div style={{ y: heroTextY, opacity: heroOpacity }} className="max-w-4xl md:max-w-2xl text-center md:text-left">
               <div className="h-px w-12 bg-brand-accent-gold" />
 
 
@@ -524,6 +526,21 @@ export default function App() {
                   Ver Portfólio
                 </a>
               </motion.div>
+            </motion.div>
+
+            {/* Foto da Expert no Mobile - Posicionada fora do parallax */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.3 }}
+              className="md:hidden w-full max-w-sm aspect-[4/5] rounded-[40px] overflow-hidden shadow-2xl border border-white/10 mt-8 mb-12 relative z-20"
+            >
+              <img 
+                src="/fotos/foto2.jpeg" 
+                alt="Expert TMC" 
+                className="w-full h-full object-cover"
+              />
             </motion.div>
           </div>
 
