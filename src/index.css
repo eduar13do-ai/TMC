@@ -12,6 +12,7 @@
   --color-brand-surface-muted: #F2F0ED;
   --color-brand-text: #1A1A1A;
   --color-brand-muted: #666666;
+  --color-brand-accent-gold: #C5A059;
 
   --bg-gradient-premium: radial-gradient(circle at 10% 20%, rgba(122, 50, 54, 0.08) 0%, transparent 40%),
     radial-gradient(circle at 90% 80%, rgba(122, 50, 54, 0.12) 0%, transparent 40%);
