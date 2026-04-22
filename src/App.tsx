@@ -671,7 +671,7 @@ export default function App() {
                   viewport={{ once: true }}
                   className="text-6xl sm:text-8xl md:text-[110px] font-black mb-12 tracking-tighter text-white leading-[0.9] text-balance"
                 >
-                  Estratégia & <br /> <span className="text-brand-accent">Execução</span>
+                  Engenharia de <br /> <span className="text-brand-accent">Alto Desempenho</span>
                 </motion.h2>
                 <motion.p
                   initial={{ opacity: 0, y: 20 }}
@@ -709,7 +709,7 @@ export default function App() {
                   <div className="relative aspect-[4/5] rounded-[40px] sm:rounded-[60px] overflow-hidden group/img shadow-[0_40px_80px_-20px_rgba(0,0,0,0.6)] ring-1 ring-white/10 bg-brand-surface-muted">
                     <img
                       src="/fotos/foto2.jpeg"
-                      alt="TMC Engenharia - Estratégia e Execução"
+                      alt="TMC Engenharia - Engenharia de Alto Desempenho"
                       className="absolute inset-0 w-full h-full object-cover transition-transform duration-1000 group-hover/img:scale-110"
                       onError={(e) => {
                         // Fallback case if the local image is still missing in production
