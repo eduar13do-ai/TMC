@@ -947,20 +947,37 @@ export default function App() {
                       </div>
                     </a>
 
-                    <a
-                      href="https://www.instagram.com/engenhariatmc/"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="flex items-center gap-6 group cursor-pointer"
-                    >
-                      <div className="w-12 h-12 rounded-xl bg-brand-accent/10 flex items-center justify-center text-brand-accent group-hover:bg-brand-accent group-hover:text-white transition-all shadow-sm">
-                        <Instagram size={24} />
-                      </div>
-                      <div>
-                        <div className="text-[10px] font-black uppercase tracking-[0.2em] text-brand-muted mb-1">Instagram</div>
-                        <div className="text-xl text-brand-text font-bold group-hover:text-brand-accent transition-colors">@engenhariatmc</div>
-                      </div>
-                    </a>
+                    <div className="space-y-4">
+                      <a
+                        href="https://www.instagram.com/engenhariatmc/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex items-center gap-6 group cursor-pointer"
+                      >
+                        <div className="w-12 h-12 rounded-xl bg-brand-accent/10 flex items-center justify-center text-brand-accent group-hover:bg-brand-accent group-hover:text-white transition-all shadow-sm">
+                          <Instagram size={24} />
+                        </div>
+                        <div>
+                          <div className="text-[10px] font-black uppercase tracking-[0.2em] text-brand-muted mb-1">Instagram</div>
+                          <div className="text-xl text-brand-text font-bold group-hover:text-brand-accent transition-colors">@engenhariatmc</div>
+                        </div>
+                      </a>
+
+                      <a
+                        href="https://www.instagram.com/tmcsolucoes/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex items-center gap-6 group cursor-pointer"
+                      >
+                        <div className="w-12 h-12 rounded-xl bg-brand-accent/10 flex items-center justify-center text-brand-accent group-hover:bg-brand-accent group-hover:text-white transition-all shadow-sm">
+                          <Instagram size={24} />
+                        </div>
+                        <div>
+                          <div className="text-[10px] font-black uppercase tracking-[0.2em] text-brand-muted mb-1">Instagram</div>
+                          <div className="text-xl text-brand-text font-bold group-hover:text-brand-accent transition-colors">@tmcsolucoes</div>
+                        </div>
+                      </a>
+                    </div>
 
                     <a
                       href="mailto:tmcsolucoesengenharia@gmail.com"
@@ -1051,7 +1068,18 @@ export default function App() {
                       className="text-sm text-white/60 hover:text-white transition-all flex items-center gap-3 group/inst"
                     >
                       <Instagram size={18} className="text-white/40 group-hover/inst:text-brand-accent transition-colors" />
-                      Instagram
+                      @engenhariatmc
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="https://www.instagram.com/tmcsolucoes/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-sm text-white/60 hover:text-white transition-all flex items-center gap-3 group/inst"
+                    >
+                      <Instagram size={18} className="text-white/40 group-hover/inst:text-brand-accent transition-colors" />
+                      @tmcsolucoes
                     </a>
                   </li>
                 </ul>
