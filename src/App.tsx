@@ -1087,9 +1087,19 @@ export default function App() {
             </div>
           </div>
           <div className="pt-12 border-t border-white/5 flex flex-col md:flex-row items-center justify-between gap-6">
-            <p className="text-white/20 text-[10px] font-black uppercase tracking-[0.2em]">
-              &copy; 2024 TMC Engenharia. All rights reserved. Creative Direction.
-            </p>
+            <div className="flex flex-col items-center md:items-start gap-1">
+              <p className="text-white/20 text-[10px] font-black uppercase tracking-[0.2em]">
+                &copy; 2024 TMC Engenharia. All rights reserved.
+              </p>
+              <a 
+                href="https://andrehuhn.com.br/" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="reflective-text text-[10px] font-black uppercase tracking-[0.2em]"
+              >
+                Desenvolvido com excelência Andre Huhn
+              </a>
+            </div>
             <div className="flex gap-10">
               <div className="w-1.5 h-1.5 rounded-full bg-brand-accent" />
               <div className="w-1.5 h-1.5 rounded-full bg-white/10" />

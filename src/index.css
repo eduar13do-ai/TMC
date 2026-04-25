@@ -140,3 +140,27 @@
 .delay-3 {
   animation-delay: 0.6s;
 }
+
+.reflective-text {
+  background: linear-gradient(
+    120deg,
+    rgba(255, 255, 255, 0.2) 30%,
+    rgba(255, 255, 255, 0.8) 50%,
+    rgba(255, 255, 255, 0.2) 70%
+  );
+  background-size: 200% auto;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  animation: shine 4s linear infinite;
+  display: inline-block;
+}
+
+@keyframes shine {
+  0% {
+    background-position: -200% center;
+  }
+  100% {
+    background-position: 200% center;
+  }
+}
